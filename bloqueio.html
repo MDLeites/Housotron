@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Housotron - Ecrã Bloqueio</title>
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bloqueio.js"></script>
+  <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+}
+  </script>
+  
+  <style>
+    ::-webkit-scrollbar {
+      width: .25em;
+    }
+ 
+    ::-webkit-scrollbar-track {
+      background-color: rgba(217, 217, 217, .5);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(70, 70, 70, .5);
+      box-shadow:
+        inset .05em .05em 0 rgba(0, 0, 0, .1),
+        inset 0 -.05em 0 rgba(0, 0, 0, .07)
+      ;
+    }
+    
+  </style>
+</head>
+
+<body onload="startTime()">
+  <div id="ecra_bloqueio">
+    <div class="w3-container w3-display-middle">
+      <div id="date_time">
+        <div id="weekDay"></div>
+        <div id="day"></div>
+        <div id="time"></div>
+      </div>
+      <div id="notificacoes">
+        <ul>
+          <li style="display: none"></li>
+          
+        </ul>
+      </div>
+    </div>
+    
+    <div><button id="botaoDesbloqueio"><i class="fa fa-unlock w3-display-bottommiddle w3-text-white w3-hover-text-black w3-jumbo"></i></button></div>
+    
+  </div>
+</body>
+</html>

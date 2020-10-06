@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Housotron - Em Curso</title>
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/geral.js"></script>
+  <script src="js/em_curso.js"></script>
+</head>
+
+<body>
+  <div id="resolution">
+    <div id="menu" class="w3-bar w3-container">
+      <a href="menu.html" class="menu_buttom w3-button w3-text-white w3-left"><i class="fa fa-home w3-xxxlarge"></i></a>
+      <a class="menu_buttom w3-button w3-right" onclick="localStorage.setItem('pagina', 'curso.html');" href="bloqueio.html"><i class="fa fa fa-lock w3-xxxlarge"></i></a>
+    </div>
+
+    <div id="main">
+      <h1 class="cor-text-curso">Em Curso</h1>
+
+      <table id="curso" class="w3-table w3-bordered">
+        <thead>
+          <tr>
+            <th><h5 class="cor-text-curso-light">Designação</h5></th>
+            <th><h5 class="cor-text-curso-light">Local</h5></th>
+            <th><h5 class="cor-text-curso-light">Dia</h5></th>
+            <th><h5 class="cor-text-curso-light">Início</h5></th>
+            <th><h5 class="cor-text-curso-light">Fim (estimado)</h5></th>
+            <th><h5 class="cor-text-curso-light">Opcões</h5></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            
+          </tr>
+
+        </tbody>
+      <table>
+
+      <div id="plano" class="w3-container display-none">
+        <div id="aviso" class="w3-container w3-white display-none">
+          <i id="warning" class="fa fa-warning w3-quarter w3-margin-right"></i>
+          <div class="w3-rest w3-margin-left">
+            <h3 class="upper">Aviso !</h3>
+            <p>Está prestes a terminar uma tarefa. Deseja continuar?</p>
+            <hr>
+            <p id="tarefa"></p>
+            <div>
+              <button id="cancelar" class="w3-button green-button w3-large w3-left">Cancelar</button>
+              <button id="confirmar" class="w3-button red-button w3-large w3-right">Confirmar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="confirmar_voltar" class="w3-container"><a class="w3-button w3-left w3-dark-gray w3-large" href="menu.html">Voltar</a></div>
+    </div>
+  </div>
+
+</body>
+</html>

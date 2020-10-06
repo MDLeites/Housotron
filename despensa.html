@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Housotron - Despensa</title>
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/despensa.js"></script>
+  <script src="js/geral.js"></script>
+</head>
+
+<body>
+  <div id="resolution">
+    <div id="menu" class="w3-bar w3-container">
+      <a href="menu.html" class="menu_buttom w3-button w3-text-white w3-left"><i class="fa fa-home w3-xxxlarge"></i></a>
+      <button id="infoButton" class="menu_buttom w3-button w3-text-white"><i class="fa fa-question-circle-o w3-xxxlarge"></i></button>
+      <a class="menu_buttom w3-button w3-right" onclick="localStorage.setItem('pagina', 'despensa.html');" href="bloqueio.html"><i class="fa fa fa-lock w3-xxxlarge"></i></a>
+    </div>
+
+    <div id="main">
+      
+      <div id="information" class="w3-sidebar w3-bar-block w3-card-2 w3-animate-top display-none">
+        <button id="close" class="w3-rigth w3-button"><i class="fa fa-close w3-text-black"></i></button>
+        <div class="w3-container w3-bar-item w3-text-black">
+          <h2 class="w3-center w3-text-black">Olá!</h2>
+          <p>Esta é a página onde pode encontrar a sua lista das compras. Esta lista é gerada segundo uma seleção de alimentos essenciais que devem estar no seu frigorífico e/ou na sua despensa.</p>
+          <p>A lista representa os alimentos considerados em falta, podendo estes serem removidos. Também é possível adicionar alimentos.</p>
+        </div>
+        <div class="w3-container w3-bar-item w3-light-gray w3-text-black">
+          <h3 class="w3-text-black">Elementos da Página</h3>
+          <p></p>
+          <dl>
+            <dt>Alimentos:</dt>
+            <dd>Alimentos possíveis para escolha.</dd>
+            <dt>Lista das Compras:</dt>
+            <dd>Lista de alimentos escolhidos para comprar, posteriormente.</dd>
+          </dl>
+        </div>
+        <div class="w3-container w3-bar-item w3-white">
+          <h3 class="w3-text-black">Botões</h3>
+          <p></p>
+          <dl>
+            <dt><i class="fa fa-caret-square-o-right"></i>:</dt>
+            <dd>Adicionar o alimento selecionado à lista das compras.</dd>
+            <dt><button class="w3-button w3-dark-gray w3-tiny">Comprar Online</button>:</dt>
+            <dd>Fazer a encomenda online da lista das compras.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <h1 class="cor-text-despensa">Despensa</h1>
+
+
+      <div id="tabela_produtos">
+        <div id="escolha_compras" class="w3-left">
+          <table class="w3-table w3-bordered">
+            <thead>
+              <tr>
+                <th><h2 class="cor-text-despensa-light">Alimentos  <span class="w3-tiny"> Selecione um, ou mais, alimentos.</span></h2></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Alface</td></tr>
+              <tr><td>Arroz</td></tr>
+              <tr><td>Atum</td></tr>
+              <tr><td>Azeitonas</td></tr>
+              <tr><td>Bolachas</td></tr>
+              <tr><td>Café</td></tr>
+              <tr><td>Cogumelos</td></tr>
+              <tr><td>Costeletas</td></tr>
+              <tr><td>Ervilhas</td></tr>
+              <tr><td>Massa</td></tr>
+              <tr><td>Melância</td></tr>
+              <tr><td>Milho</td></tr>
+              <tr><td>Morangos</td></tr>
+              <tr><td>Uvas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="addFood" class="w3-button w3-display-middle">
+          <i class="fa fa-caret-right cor-text-despensa" style="font-size:100px"></i>
+        </div>
+        <div id="lista_compras" class="w3-right">
+          <table id="alimentos" class="w3-table w3-bordered">
+            <thead>
+              <tr>
+                <th colspan="3"><h2 class="cor-text-despensa-light">Lista das Compras</h2></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+      <div id="confirmar_voltar" class="w3-container">
+        <a class="w3-button w3-dark-gray w3-large w3-left" href="menu.html">Voltar</a>
+        <button id="online" class="w3-button general-button w3-large w3-right">Comprar Online</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

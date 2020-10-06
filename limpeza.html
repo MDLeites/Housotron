@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Housotron - Limpeza</title>
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/geral.js"></script>
+  <script src="js/limpeza_entertenimento.js"></script>
+</head>
+
+<body>
+  <div id="resolution">
+    <div id="menu" class="w3-bar w3-container">
+      <a href="menu.html" class="menu_buttom w3-button w3-text-white w3-left"><i class="fa fa-home w3-xxxlarge"></i></a>
+      <a class="menu_buttom w3-button w3-right" onclick="localStorage.setItem('pagina', 'limpeza.html');" href="bloqueio.html"><i class="fa fa fa-lock w3-xxxlarge"></i></a>
+    </div>
+
+    <div id="main">
+      <h1 class="cor-text-limpeza">Limpeza</h1>
+
+      <div id="limpezas">
+        <nav class="wrapper">
+          <ul>
+            <li><a><div class="home">Aspirar</div></a></li>
+            <li><a><div class="home">Lavar o Chão</div></a></li>
+          </ul>
+        </nav>
+      
+        <nav class="wrapper">
+          <ul>
+            <li><a><div class="home">Limpar o Pó</div></a></li>
+            <li><a><div class="home">Limpeza TOTAL</div></bu></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="programar_tarefa" class="w3-container w3-padding w3-animate-right display-none">
+        <h1 id="titulo_tarefa" class="cor-text-limpeza"></h1>
+
+        <form id="local_temp" class="w3-half w3-margin-right">
+          <p>
+            <label>Local:</label>
+            <div id="checkLocal">
+              <input type="checkbox" id="local" class="w3-check" value="Casa de Banho"><label> Casa de Banho</label><br>
+              <input type="checkbox" id="local" class="w3-check" value="Corredor"><label> Corredor</label><br>
+              <input type="checkbox" id="local" class="w3-check" value="Cozinha"><label> Cozinha</label><br>
+              <input type="checkbox" id="local" class="w3-check" value="Escritório"><label> Escritório</label><br>
+              <input type="checkbox" id="local" class="w3-check" value="Hall de Entrada"><label> Hall de Entrada</label><br>
+              <input type="checkbox" id="local" class="w3-check" value="Quarto"><label> Quarto</label><br>
+              <input type="checkbox" id="local" class="w3-check" value="Sala"><label> Sala</label><br>
+              <input type="checkbox" id="local" class="w3-check" value="Toda a Casa"><label> Toda a Casa</label><br>
+            </div>
+          </p>
+        </form>
+
+        <form id="programarData" class="w3-rest">
+          <p><label id="programarButton" class="w3-button">Programar Data/Hora <i class="fa fa-angle-down"></i> </label></p>
+          
+          <p id="programarD" class="display-none">
+            <label>Dia:</label>
+            <input type="date" id="data" class="w3-input w3-border" required>
+          </p>
+          <p id="programarH" class="display-none">
+            <label>Hora:</label>
+            <input type="time" step="900" id="hora" class="w3-input w3-border" required>
+          </p>
+        </form>
+
+        <button id="submit" class="w3-button w3-right w3-large general-button clear-both" disabled>Confirmar</button>
+      </div>
+
+      <div id="plano" class="w3-container display-none">
+        <div id="verificar" class="w3-container display-none">
+          <i id="close" class="fa fa-close w3-right w3-button w3-large w3-margin-top"></i>
+          <i id="verification" class="fa fa-info w3-quarter"></i>
+          <div class="w3-rest">
+            <h3 class="upper">Verificar dados</h3>
+            <p id="verificar_local"></p>
+            <hr>
+            <p id="verificar_data"></p>
+            <p id="verificar_hora"></p>
+            <div>
+              <button id="cancelar" class="w3-button red-button w3-large w3-left">Cancelar</button>
+              <button id="confirmar" class="w3-button green-button w3-large w3-right">Confirmar</button>
+            </div>
+          </div>
+        </div>
+        
+        <div id="sucesso" class="w3-container w3-display-middle display-none">
+          <i class="fa fa-check w3-xxxlarge w3-left"></i>
+          <i class="fa fa-close w3-right w3-button" onclick="$('#plano, #sucesso').css('display', 'none');location.reload();"></i>
+          <p class="w3-right">A sua tarefa foi criada e adicionada à agenda com sucesso!</p>
+          <a class="w3-button general-button w3-large w3-right" href="curso.html">Ir para Em Curso</a>
+        </div>
+      </div>
+
+
+      <div id="voltar" class="w3-container"><a class="w3-button w3-left w3-dark-gray w3-large" href="menu.html">Voltar</a></div>
+    </div>
+  </div>
+
+</body>
+</html>

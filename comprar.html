@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Housotron - Comprar Online</title>
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/compras.js"></script>
+  <script src="js/geral.js"></script>
+
+</head>
+
+<body>
+  <div id="resolution">
+    <div id="menu" class="w3-bar w3-container">
+      <a href="menu.html" class="menu_buttom w3-button w3-text-white w3-left"><i class="fa fa-home w3-xxxlarge"></i></a>
+      <a class="menu_buttom w3-button w3-right" onclick="localStorage.setItem('pagina', 'comprar.html');" href="bloqueio.html"><i class="fa fa fa-lock w3-xxxlarge"></i></a>
+    </div>
+
+    <div id="main">
+      <h1 class="cor-text-despensa">Comprar Online</h1>
+      <div class="w3-container w3-half">
+        <div id="visualizar_compras">
+          <h2 class="cor-text-despensa-light">Lista das Compras</h2>
+          <table class="w3-table w3-bordered">
+            <thead>
+              <tr>
+                <th>Alimento</th>
+                <th>Preço</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="supermercados">
+          <p>Selecione o Supermercado:</p>
+          <div class="inline-list" >
+            <button class="w3-button selected-despensa">Jumbo</button>
+            <button class="w3-button">Continente</button>
+            <button class="w3-button">Lidl</button>
+            <button class="w3-button">Pingo Doce</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="pagamento" class="w3-container w3-rest">
+        <h2 class="cor-text-despensa-light">Pagamento</h2>
+        <div>
+          <form id="detalhes">
+            <p>
+              <label>Nome:</label>
+              <input type="text" id="nome" name="nome" class="w3-input w3-border" value="Ana Sofia Fernandes" required>
+            </p>
+            <p>
+              <label>Morada:</label>
+              <input type="text" id="morada" name="morada" class="w3-input w3-border" value="Rua Almeida Garret n45 3drt 2835-435 Barreiro" required>
+            </p>
+            <p class="inline-list" style="width: 100%">
+              <label>Modo Pagamento:</label>
+              <input type="radio" name="pagamento" value="À Cobrança" class="w3-margin-right w3-margin-left" checked> À cobrança
+              <input type="radio" name="pagamento" value="Multibanco" class="w3-margin-right w3-margin-left"> Multibanco
+            </p>
+          </form>
+          <button id="submit" class="w3-button w3-large w3-right general-button" disabled>Comprar Online</button>
+        </div>
+      </div>
+
+
+      <div id="plano" class="w3-container display-none">
+        <div id="verificar" class="w3-container display-none">
+          <i id="close" class="fa fa-close w3-right w3-button w3-large w3-margin-top"></i>
+          <i id="verification" class="fa fa-info w3-quarter"></i>
+          <div class="w3-rest">
+            <h3 class="upper">Verificar dados</h3>
+            <p id="verificar_nome"></p>
+            <p id="verificar_morada"></p>
+            <p id="verificar_pagamento"></p>
+            <p id="verificar_supermercado"></p>
+            <p id="verificar_total"></p>
+            <div>
+              <button id="cancelar" class="w3-button red-button w3-large w3-left">Cancelar</button>
+              <button id="confirmar" class="w3-button green-button w3-large w3-right">Confirmar</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="sucesso" class="w3-container w3-display-middle display-none">
+          <i class="fa fa-check w3-xxxlarge w3-left"></i>
+          <i class="fa fa-close w3-right w3-button" onclick="location.href='menu.html';"></i>
+          <p class="w3-right">A sua tarefa foi criada e adicionada à agenda com sucesso!</p>
+          <a class="w3-button general-button w3-large w3-right" href="despensa.html">Ir para Despensa</a>
+        </div>
+
+        <div id="aviso" class="w3-container w3-white display-none">
+          <i id="warning" class="fa fa-warning w3-quarter w3-margin-right"></i>
+          <div class="w3-rest w3-margin-left">
+            <h3 class="w3-text-black">Aviso !</h3>
+            <p>Está prestes a sair da página sem realizar modificações. Deseja continuar?</p>
+            <p class="w3-tiny">Ao confirmar, não serão realizadas quaisquer alterações à tarefa.</p>
+            <div>
+              <button id="cancelar" class="w3-button w3-large w3-left green-button" onclick="$('#plano, #aviso').css('display', 'none');">Cancelar</button>
+              <a id="confirmar" class="w3-button w3-large w3-right red-button" href="despensa.html">Confirmar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="voltar" class="w3-container"><button class="w3-button w3-left w3-dark-gray w3-large">Voltar</button></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
